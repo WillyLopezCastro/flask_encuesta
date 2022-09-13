@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+    <title>ENCUESTA DOJO</title>
+</head>
+<body>
+    <div class="flex justify-center col-6 mx-auto text-center">
+        <form action="/process" class="bg-dark text-warning text-center p-5 rounded" method="post">
+            <div class="form-group">
+                <h1>Dojo Survey</h1>
+                <p>
+                    <label for="name">Name</label>
+                </p>
+                <p>
+                    <input type="text" name="name" id="name">
+                </p>
+                <p>
+                    <label for = "location">Dojo Location:</label>
+                </p>
+                <p>
+                    <select name="location">
+                        <option>Santiago</option>
+                        <option>San Diego</option>
+                        <option>Caracas</option>
+                        <option>Buenos Aires</option>
+                    </select>
+                </p>
+                <p>
+                    <label for = "languaje">Favorite Languaje:</label>
+                </p>
+                <p>
+                    <select name="languaje">
+                        <option>JavaScript</option>
+                        <option>Phyton</option>
+                        <option>HTML</option>
+                        <option>CSS</option>
+                    </select>
+                </p>
+                <p>
+                    <label for = "comment">Comment (optional):</label>
+                </p>
+                <p>
+                    <textarea name="comment" cols="50" rows="5"></textarea>
+                </p>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-warning">
+        </form>
+    </div>
+    
+</body>
+</html>
